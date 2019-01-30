@@ -1,0 +1,14 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+pillow = "==5.4.1"
+celery = "==4.2.1"
+aiohttp = "==3.5.4"
+
+[requires]
+python_version = "3.6"

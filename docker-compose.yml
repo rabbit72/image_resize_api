@@ -1,0 +1,26 @@
+version: '3.1'
+services:
+  web_api:
+    build: api/.
+    restart: always
+    container_name: image_api
+    ports:
+    - "8080:8080"
+    links:
+      - redis
+    depends_on:
+      - redis
+      - celery_workers
+
+  celery_workers:
+    image: celery:4.0.2
+    environment:
+      - CELERY_BROKER_URL=redis://redis
+    links:
+      - redis
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:5.0.3
+
