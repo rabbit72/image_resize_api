@@ -1,11 +1,11 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "ca17091cd227424e7041328097c24216797b4c8dc1235b95f02d825ea37e0a05"
+            "sha256": "4ebf3f1b1fce6aa8d70da607ad75377cd3e3aab66104e51db926604290f3f7a3"
         },
         "pipfile-spec": 6,
         "requires": {
-            "python_version": "3.6"
+            "python_version": "3.7"
         },
         "sources": [
             {
@@ -79,6 +79,13 @@
             "index": "pypi",
             "version": "==4.2.1"
         },
+        "certifi": {
+            "hashes": [
+                "sha256:47f9c83ef4c0c621eaef743f133f09fa8a74a9b75f037e8624f83bd1b6626cb7",
+                "sha256:993f830721089fef441cdfeb4b2c8c9df86f0c63239f06bd025a76a7daddb033"
+            ],
+            "version": "==2018.11.29"
+        },
         "chardet": {
             "hashes": [
                 "sha256:84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae",
@@ -92,13 +99,6 @@
                 "sha256:ea8b7f6188e6fa117537c3df7da9fc686d485087abf6ac197f9c46432f7e4a3c"
             ],
             "version": "==2.8"
-        },
-        "idna-ssl": {
-            "hashes": [
-                "sha256:a933e3bb13da54383f9e8f35dc4f9cb9eb9b3b78c6b36f311254d6d0d92c6c7c"
-            ],
-            "markers": "python_version < '3.7'",
-            "version": "==1.1.0"
         },
         "kombu": {
             "hashes": [
@@ -184,14 +184,20 @@
             ],
             "version": "==2018.9"
         },
-        "typing-extensions": {
+        "sentry-sdk": {
             "hashes": [
-                "sha256:07b2c978670896022a43c4b915df8958bec4a6b84add7f2c87b2b728bda3ba64",
-                "sha256:f3f0e67e1d42de47b5c67c32c9b26641642e9170fe7e292991793705cd5fef7c",
-                "sha256:fb2cd053238d33a8ec939190f30cfd736c00653a85a2919415cecf7dc3d9da71"
+                "sha256:78bb79adfe991a770ce2179826f5f216e086bbc4bd4585c543f377180cae3654",
+                "sha256:a6cfb0a2316416d100d2732a26c95fb7d534c9dcc16e2682e8d19fcd45f0a2c6"
             ],
-            "markers": "python_version < '3.7'",
-            "version": "==3.7.2"
+            "index": "pypi",
+            "version": "==0.6.9"
+        },
+        "urllib3": {
+            "hashes": [
+                "sha256:61bf29cada3fc2fbefad4fdf059ea4bd1b4a86d2b6d15e1c7c0b582b9752fe39",
+                "sha256:de9529817c93f27c8ccbfead6985011db27bd0ddfcdb2d86f3f663385c6a9c22"
+            ],
+            "version": "==1.24.1"
         },
         "vine": {
             "hashes": [
