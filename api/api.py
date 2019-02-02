@@ -7,6 +7,8 @@ sentry_sdk.init(
 )
 
 from aiohttp import web
+from tasks import add
+
 
 routes = web.RouteTableDef()
 
@@ -14,8 +16,10 @@ routes = web.RouteTableDef()
 @routes.get('/')
 @routes.get('/{name}')
 async def handler(request):
-    name = request.match_info.get('name', "Anonymous")
-    text = "Hello, " + name
+
+    celery_response = add(4, 4)
+    print(celery_response)
+    text = f"Your result: {celery_response}"
     return web.Response(text=text)
 
 
