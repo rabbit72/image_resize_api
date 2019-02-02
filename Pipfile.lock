@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "4ebf3f1b1fce6aa8d70da607ad75377cd3e3aab66104e51db926604290f3f7a3"
+            "sha256": "ab5c50c81057b460566a1758bc0230078bcfb3e6107864107038f53bf2d136cc"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -44,13 +44,6 @@
             "index": "pypi",
             "version": "==3.5.4"
         },
-        "amqp": {
-            "hashes": [
-                "sha256:9f181e4aef6562e6f9f45660578fc1556150ca06e836ecb9e733e6ea10b48464",
-                "sha256:c3d7126bfbc640d076a01f1f4f6e609c0e4348508150c1f61336b0d83c738d2b"
-            ],
-            "version": "==2.4.0"
-        },
         "async-timeout": {
             "hashes": [
                 "sha256:0c3c816a028d47f659d6ff5c745cb2acf1f966da1fe5c19c77a70282b25f4c5f",
@@ -65,19 +58,8 @@
             ],
             "version": "==18.2.0"
         },
-        "billiard": {
-            "hashes": [
-                "sha256:42d9a227401ac4fba892918bba0a0c409def5435c4b483267ebfe821afaaba0e"
-            ],
-            "version": "==3.5.0.5"
-        },
         "celery": {
-            "hashes": [
-                "sha256:77dab4677e24dc654d42dfbdfed65fa760455b6bb563a0877ecc35f4cfcfc678",
-                "sha256:ad7a7411772b80a4d6c64f2f7f723200e39fb66cf614a7fdfab76d345acc7b13"
-            ],
-            "index": "pypi",
-            "version": "==4.2.1"
+            "file": "https://github.com/celery/celery/tarball/master"
         },
         "certifi": {
             "hashes": [
@@ -99,13 +81,6 @@
                 "sha256:ea8b7f6188e6fa117537c3df7da9fc686d485087abf6ac197f9c46432f7e4a3c"
             ],
             "version": "==2.8"
-        },
-        "kombu": {
-            "hashes": [
-                "sha256:1ef049243aa05f29e988ab33444ec7f514375540eaa8e0b2e1f5255e81c5e56d",
-                "sha256:3c9dca2338c5d893f30c151f5d29bfb81196748ab426d33c362ab51f1e8dbf78"
-            ],
-            "version": "==4.2.2.post1"
         },
         "multidict": {
             "hashes": [
@@ -177,12 +152,13 @@
             "index": "pypi",
             "version": "==5.4.1"
         },
-        "pytz": {
+        "redis": {
             "hashes": [
-                "sha256:32b0891edff07e28efe91284ed9c31e123d84bea3fd98e1f72be2508f43ef8d9",
-                "sha256:d5f05e487007e29e03409f9398d074e158d920d36eb82eaf66fb1136b0c5374c"
+                "sha256:74c892041cba46078ae1ef845241548baa3bd3634f9a6f0f952f006eb1619c71",
+                "sha256:7ba8612bbfd966dea8c62322543fed0095da2834dbd5a7c124afbc617a156aa7"
             ],
-            "version": "==2018.9"
+            "index": "pypi",
+            "version": "==3.1.0"
         },
         "sentry-sdk": {
             "hashes": [
@@ -198,13 +174,6 @@
                 "sha256:de9529817c93f27c8ccbfead6985011db27bd0ddfcdb2d86f3f663385c6a9c22"
             ],
             "version": "==1.24.1"
-        },
-        "vine": {
-            "hashes": [
-                "sha256:3cd505dcf980223cfaf13423d371f2e7ff99247e38d5985a01ec8264e4f2aca1",
-                "sha256:ee4813e915d0e1a54e5c1963fde0855337f82655678540a6bc5996bca4165f76"
-            ],
-            "version": "==1.2.0"
         },
         "yarl": {
             "hashes": [
