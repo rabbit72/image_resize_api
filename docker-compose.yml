@@ -1,26 +1,28 @@
 version: '3.1'
 services:
-  web_api:
-    build: .
-    image: resize_api:latest
-    restart: always
-    container_name: resize_api
-    ports:
-    - "8080:8080"
-    links:
-      - redis
-    depends_on:
-      - redis
-      - celery_workers
+#  web_api:
+#    build: .
+#    image: resize_api:latest
+#    restart: always
+#    container_name: resize_api
+#  environment:
+#    - CELERY_BROKER_URL=redis://redis
+#    - CELERY_RESULT_BACKEND=redis://redis
+#    ports:
+#    - "8080:8080"
+#    links:
+#      - redis
+#    depends_on:
+#      - redis
+#      - celery_workers
 
   celery_workers:
-    image: celery:4.0.2
+    build: celery_queue/.
     restart: always
     container_name: resize_celery
     environment:
       - CELERY_BROKER_URL=redis://redis
-      - CELERY_RESULT_BACKEND=redis://redis/0
-
+      - CELERY_RESULT_BACKEND=redis://redis
     links:
       - redis
     depends_on:
@@ -32,4 +34,3 @@ services:
     restart: always
     ports:
       - "6379:6379"
-

@@ -29,7 +29,7 @@ async def resize_image(request):
     height = int(data["height"])
     width = int(data["width"])
     print(str(data["image"].file))  # TODO serialize this object and send to workers
-    task = tasks.resize_image.delay(data["image"], height, width)
+    task = tasks.resize_image.delay(1, 2, 3)
     return web.json_response({"task_id": task.id})
 
 
@@ -40,9 +40,10 @@ async def get_image(request):
         web.json_response(
             {"task_id": task_id, "message": "Image resizing has not finished"}
         )
-    image_bytes = tasks.resize_image.AsyncResult(task_id)
-    print(image_bytes)
-    return web.Response(body=io.StringIO(image_bytes))
+    task = tasks.resize_image.AsyncResult(task_id)
+    image = task.result
+    return web.Response(text=task.result)
+    # return web.Response(body=io.StringIO(image_bytes))
 
 
 @routes.get("/image/{id}/status/")
