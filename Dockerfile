@@ -10,17 +10,16 @@ RUN pip install pipenv
 
 WORKDIR api/
 
-# copy all file from api/
-COPY api .
 COPY Pipfile .
 COPY Pipfile.lock .
 
 # create enviroment
 RUN pipenv install
 
+COPY api.py .
+
 # expose the app port
 EXPOSE 8080
-
 
 # run the app server
 CMD ["pipenv", "run", "python", "api.py"]
