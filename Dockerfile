@@ -2,6 +2,7 @@ FROM python:3.7
 
 LABEL maintainer="Daniil Shadrin rabbit72rus@gmail.com"
 
+# system requirements for Python lib - Pillow
 RUN apt-get update -y && apt-get install libtiff-dev libjpeg-dev zlib1g-dev \
 libfreetype6-dev liblcms2-dev libwebp-dev tcl-dev tk-dev python-tk -y
 
