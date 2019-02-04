@@ -8,6 +8,7 @@ libfreetype6-dev liblcms2-dev libwebp-dev tcl-dev tk-dev python-tk -y
 
 RUN pip install pipenv
 
+WORKDIR api/celery_queue/
 WORKDIR api/
 
 COPY Pipfile .
@@ -15,6 +16,8 @@ COPY Pipfile.lock .
 
 # create enviroment
 RUN pipenv install
+
+COPY celery_queue/tasks.py celery_queue/
 
 COPY api.py .
 
